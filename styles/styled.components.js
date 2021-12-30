@@ -11,6 +11,10 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url('/img/main-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
 export const Error = styled.h2`
