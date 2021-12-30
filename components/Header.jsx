@@ -4,7 +4,7 @@ const Head = () => {
     return (
         <Header>
             <PokemonLogo src='/img/pkmlogo.png' />
-            <h4>Powered by PokeAPI.co</h4>
+            <h4 style={{ color: '#ffcc01' }} >Powered by PokeAPI.co</h4>
         </Header>        
     )
 }

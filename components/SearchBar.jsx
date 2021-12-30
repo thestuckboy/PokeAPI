@@ -8,6 +8,7 @@ function SearchBar({ setPokemon }) {
     const handleSubmit = (e)=>{
         e.preventDefault()
         setPokemon(state.toLowerCase())
+        setState('')
     }
 
     const handleChange = (e) =>{
@@ -18,11 +19,11 @@ function SearchBar({ setPokemon }) {
         <Form onSubmit={handleSubmit}>
             <InputSearch 
                 value={state} 
-                placeholder="You can look for name or ID" 
+                placeholder='You can look by name or ID'
                 onChange={handleChange}
                 name='searchbar'
             />
-            <SubmitButton type='submit'>Buscar</SubmitButton>
+            <SubmitButton type='submit'>Search</SubmitButton>
         </Form>
     )
 }
