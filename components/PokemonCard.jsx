@@ -20,7 +20,7 @@ function PokemonCard({ pokemon }) {
                 <PokemonBaseStats>
                     {stats.map(x => 
 
-                        <Stats data={x}/>
+                        <Stats data={x} key={x.stat.name}/>
                      
                     )}
                 </PokemonBaseStats>
