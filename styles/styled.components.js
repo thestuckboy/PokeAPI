@@ -1,20 +1,19 @@
 import styled from "styled-components"
 import colorByType from "./colorByType";
 
-
 /*--- Main ---*/
 
 export const MainContainer = styled.div`
-  background-color: rgb(0,0,0,.5);
+  background-color: #333533;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('/img/main-background.png');
+  /* background-image: url('/img/main-background.jps');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 
   @media screen and (max-width: 820px){
     font-size: .9em;
@@ -45,7 +44,6 @@ export const Error = styled.h2`
 /*--- Header ---*/
 
 export const Header = styled.header`
-    min-height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +51,7 @@ export const Header = styled.header`
 `
 
 export const PokemonLogo = styled.img`
-    width: 20em;
+    width: 10em;
     height: auto;
     margin: 1em 0em;
 `
@@ -107,17 +105,27 @@ export const Form = styled.form`
 
 export const InputSearch = styled.input`
   width: 30em;
-  border: 2px solid blue;
+  border: 2px solid #202020;
+  border-radius: .5em 0 0 .5em;
   font-size: 1.5em;
-  padding-left:.5em;
+  padding: .5em;
+  font-weight: 550;
+  background-color: #ffd100;
+  color: #202020;
 
   &:focus {
     outline: none;
   }
+
+  &::placeholder {
+    color: #202020;
+    font-weight: 550;
+  }
 `
 
 export const SubmitButton = styled.button`
-  background: blue;
+  background: #202020;
+  border-radius: 0 .5em .5em 0;
   color: white;
   cursor: pointer;
   border: none;
@@ -137,4 +145,27 @@ export const LoaderDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+
+/*--- RandomPokemon ---*/
+
+export const RandomPokemonDiv = styled.div`
+  display: grid;
+  width: 100%;
+  margin: 1em;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 600px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+
+export const PokemonCardMiniDiv = styled.div`
+  background-color: red;
 `
