@@ -14,7 +14,7 @@ function PokemonCardMiniData({ data, showLink }) {
                 <h1>{capitalizeFirstLetter(data.name)} #{data.id}</h1>
                 <StatsDiv>
                     {data.stats.map(x =>
-                        <li><b>{x.stat.name.toUpperCase()}</b>: {x.base_stat}</li>
+                        <li key={x.stat.name}><b>{x.stat.name.toUpperCase()}</b>: {x.base_stat}</li>
                     )}
                 </StatsDiv>
             </DataDiv>

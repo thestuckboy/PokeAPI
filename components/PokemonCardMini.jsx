@@ -6,15 +6,15 @@ function PokemonCardMini({ id }) {
     const [loading, setLoading] = useState(false)
     const [pokemon, setPokemon] = useState(null)
 
-    const searchForPokemon = async ()=>{
-        setLoading(true)
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-        const data = await response.json()
-        setLoading(false)
-        setPokemon(data)
-    }
-
     useEffect(()=>{
+        const searchForPokemon = async ()=>{
+            setLoading(true)
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+            const data = await response.json()
+            setLoading(false)
+            setPokemon(data)
+        }
+
         searchForPokemon()
     }, []);
 

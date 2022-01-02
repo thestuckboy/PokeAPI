@@ -1,12 +1,9 @@
 import PokemonCard from "../../components/PokemonCard"
-import { capitalizeFirstLetter } from "../../custom-functions/functions"
-import { useEffect } from "react"
+import setDocumentTitleAs from '../../custom-functions/setDocumentTitleAs'
 
 export default function Pokemon({ data }){
 
-    useEffect(()=>{
-        document.title = `PokeAPI - ${capitalizeFirstLetter(data.name)}`
-    }, [])
+    setDocumentTitleAs(`PokeApi - ${data.name}`)
 
     return(
         <PokemonCard pokemon={data}></PokemonCard>

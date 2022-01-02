@@ -1,6 +1,7 @@
 import { NavbarDiv } from '../styles/NavbarStyles'
 import { PokemonLogo } from '../styles/styled.components'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 function Navbar() {
 
@@ -13,8 +14,16 @@ function Navbar() {
             </div>
             <div>
                 <ul>
-                    <li><a href='/' className={(router.route == '/') ? 'active' : null}>Search</a></li>
-                    <li><a href='/top100' className={(router.route == '/top100') ? 'active' : null }>Top 100 Pokemons</a></li>
+                    <li>
+                        <Link href='/'>
+                            <a className={(router.route === '/') ? 'active' : null}>Search</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/top100'>
+                            <a className={(router.route === '/top100') ? 'active' : null}>Top 100</a>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </NavbarDiv>
