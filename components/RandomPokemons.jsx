@@ -3,7 +3,7 @@ import { generateArrayWithRandomNumbers } from "../custom-functions/functions"
 import { RandomPokemonDiv } from '../styles/styled.components'
 import { Fragment, memo } from 'react'
 
-const RandomPokemons = memo(() => {
+const Component = () => {
 
     const randomPokemons = generateArrayWithRandomNumbers(6)
 
@@ -17,6 +17,8 @@ const RandomPokemons = memo(() => {
             </RandomPokemonDiv>
         </Fragment>
     )
-})
+}
+
+const RandomPokemons = memo(Component)
 
 export default RandomPokemons
