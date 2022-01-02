@@ -37,8 +37,9 @@ export const MainContainer = styled.div`
 `
 
 export const Error = styled.h2`
-  color: #ffcc01;
+  color: red;
   text-decoration: underline;
+  margin: 2em 0;
 `
 
 /*--- Header ---*/

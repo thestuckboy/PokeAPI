@@ -1,9 +1,9 @@
 import PokemonCardMini from "./PokemonCardMini"
 import { generateArrayWithRandomNumbers } from "../custom-functions/functions"
 import { RandomPokemonDiv } from '../styles/styled.components'
-import { Fragment } from 'react'
+import { Fragment, memo } from 'react'
 
-function RandomPokemons() {
+const RandomPokemons = memo(() => {
 
     const randomPokemons = generateArrayWithRandomNumbers(6)
 
@@ -17,6 +17,6 @@ function RandomPokemons() {
             </RandomPokemonDiv>
         </Fragment>
     )
-}
+})
 
 export default RandomPokemons
