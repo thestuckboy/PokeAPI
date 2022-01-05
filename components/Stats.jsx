@@ -1,6 +1,7 @@
 import { StatDiv } from '../styles/styled.components'
 
 function Stats({ data }) {
+    console.log(data)
     return (
         <StatDiv>
             <p>

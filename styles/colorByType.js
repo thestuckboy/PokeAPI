@@ -1,93 +1,93 @@
 const colorByType = {
-    grass: {
-      background: '#7BC45B', 
-      color: 'black'
-    },
+  bug: {
+    background: '#92BD2D', 
+    color: 'white'
+  },
+
+  dark: {
+    background: '#595761',
+    color: 'white'
+  },
+
+  dragon: {
+    background: '#0C6AC8',
+    color: 'black'
+  },
   
-    fire: {
-      background: '#E84941', 
-      color: 'black'
-    },
+  electric: {
+    background: '#F2D94E', 
+    color: 'black'
+  },
   
-    water: {
-      background: '#46A0F8', 
-      color: 'white'
-    },
+  fairy: {
+    background: '#EF90E6',
+    color: 'black'
+  },
+
+  fighting: {
+    background: '#D3425F',
+    color: 'black'
+  },
   
-    bug: {
-      background: '#AFBF45', 
-      color: 'white'
-    },
+  fire: {
+    background: '#FBA64C', 
+    color: 'black'
+  },
   
-    normal: {
-      background: '#C9CAC3', 
-      color: 'black'
-    },
+  flying: {
+    background: '#A1BBEC',
+    color: 'black'
+  },
+
+  ghost: {
+    background: '#5F6DBC',
+    color: 'black'
+  },
+
+  grass: {
+    background: '#60BD58', 
+    color: 'black'
+  },
+
+  ground: {
+    background: '#DA7C4D',
+    color: 'black'
+  },
+
+  ice: {
+    background: '#76D1C1',
+    color: 'black'
+  },
+
+  normal: {
+    background: '#A0A29F', 
+    color: 'black'
+  },
   
-    poison: {
-      background: '#A25A94', 
-      color: 'white'
-    },
+  poison: {
+    background: '#B763CF', 
+    color: 'white'
+  },
   
-    electric: {
-      background: '#F6CF59', 
-      color: 'black'
-    },
-    
-    psychic: {
-      background: '#EB5C9E',
-      color: 'black'
-    },
-    
-    rock: {
-      background: '#BCAE71',
-      color: 'white'
-    },
-    
-    fighting: {
-      background: '#6E97EF',
-      color: 'black'
-    },
-    
-    ghost: {
-      background: '#6E6DBB',
-      color: 'black'
-    },
-    
-    ground: {
-      background: '#DBB760',
-      color: 'black'
-    },
-    
-    ice: {
-      background: '#80DEFA',
-      color: 'black'
-    },
-    
-    dragon: {
-      background: '#8271E5',
-      color: 'black'
-    },
-    
-    flying: {
-      background: 'black',
-      color: 'black'
-    },
-    
-    steel: {
-      background: '#B3B2C4',
-      color: 'black'
-    },
-    
-    dark: {
-      background: '#855F52',
-      color: 'white'
-    },
-    
-    fairy: {
-      background: '#E6A0E6',
-      color: 'black'
-    },
+  psychic: {
+    background: '#FA8582',
+    color: 'black'
+  },
+
+  rock: {
+    background: '#C9BC8A',
+    color: 'white'
+  },
+  
+  steel: {
+    background: '#5795A3',
+    color: 'black'
+  },
+  
+  water: {
+    background: '#539DDF', 
+    color: 'white'
+  },   
 }
 
 export default colorByType

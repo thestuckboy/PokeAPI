@@ -1,20 +1,28 @@
-import PokemonCard from "../../components/PokemonCard"
+import Navbar from '../../components/Navbar'
+import PokemonTable from '../../components/PokemonTable'
 import setDocumentTitleAs from '../../custom-functions/setDocumentTitleAs'
 
 export default function Pokemon({ data }){
-
-    setDocumentTitleAs(`PokeApi - ${data.name}`)
-
     return(
-        <PokemonCard pokemon={data}></PokemonCard>
+        <div>
+            <Navbar />
+            <PokemonTable data={data}/>
+        </div>
     )
 }
 
 export const getStaticProps = async({ params }) => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`)
-    const data = await response.json()
+    const descriptionResponse = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${params.id}/`)
 
-    return { props: { data }}
+    try {
+        const descriptionData = await descriptionResponse.json()
+        let data = await response.json()
+        data = { ...data, ...descriptionData }
+        return { props: { data }}
+    }catch(e){
+        return { notFound: true }
+    }
 }
 
 export const getStaticPaths = async () => {
