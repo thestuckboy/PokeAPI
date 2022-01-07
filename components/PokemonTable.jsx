@@ -5,8 +5,22 @@ import TableTypes  from './TableTypes'
 import TableNextPrevious from './TableNextPrevious'
 import { capitalizeFirstLetter } from '../custom-functions/functions'
 import { Div, Table, ImageAndStats, SecondaryData, Name} from '../styles/Table'
+import { useEffect } from 'react'
 
 const PokemonTable = ({ data }) => {
+
+    useEffect(()=>{
+        document.addEventListener('keydown', (e)=>{
+            if (e.key === 'ArrowRight'){
+                location.href = `/pokemon/${data.id + 1}`
+            }
+
+            if (e.key === 'ArrowLeft'){
+                location.href = `/pokemon/${data.id - 1}`
+            }
+        })
+    }, [])
+
     return (
         <Div>
             <Table>
