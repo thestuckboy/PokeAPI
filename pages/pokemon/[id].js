@@ -3,6 +3,8 @@ import PokemonTable from '../../components/PokemonTable'
 import setDocumentTitleAs from '../../custom-functions/setDocumentTitleAs'
 
 export default function Pokemon({ data }){
+    setDocumentTitleAs('Pokemon')
+
     return(
         <div>
             <Navbar />
